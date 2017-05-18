@@ -101,3 +101,10 @@ button:hover {
   cursor:pointer;
   transition-timing-function: ease;
 }
+
+nav {
+	background-color:#171924;
+	height: 70px;
+	display: flex;
+	align-items: center;
+}
