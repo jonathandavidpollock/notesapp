@@ -17,26 +17,50 @@ class SideNav extends Component {
   }
 
   render() {
-    return (
-      <div className="sidebar">
-        <div className="sideNav" data-target="/Documents" onClick={this.handleClick}>
-          <img src={doc} alt="folders"/>
-          <p>Documents</p>
+    if(this.props.moveNav == true) {
+      return (
+        <div className="sidebar" move={this.props.moveNav}>
+          <div className="sideNav" data-target="/Documents" onClick={this.handleClick}>
+            <img src={doc} alt="folders"/>
+            <p>Documents</p>
+          </div>
+          <div className="sideNav" data-target="/Editor" onClick={this.handleClick}>
+            <img src={pencil} alt="pencil"/>
+            <p>Editor</p>
+          </div>
+          <div className="sideNav" data-target="/Settings" onClick={this.handleClick}>
+            <img src={setting} alt="gear icon"/>
+            <p>Settings</p>
+          </div>
+          <div className="sideNav" data-target="/" onClick={this.handleClick}>
+            <img src={logout} alt="log out button"/>
+            <p>Log Out</p>
+          </div>
         </div>
-        <div className="sideNav" data-target="/Editor" onClick={this.handleClick}>
-          <img src={pencil} alt="pencil"/>
-          <p>Editor</p>
+      )
+    } else {
+      return (
+        <div className="sidebar move" move={this.props.moveNav}>
+          <div className="sideNav" data-target="/Documents" onClick={this.handleClick}>
+            <img src={doc} alt="folders"/>
+            <p>Documents</p>
+          </div>
+          <div className="sideNav" data-target="/Editor" onClick={this.handleClick}>
+            <img src={pencil} alt="pencil"/>
+            <p>Editor</p>
+          </div>
+          <div className="sideNav" data-target="/Settings" onClick={this.handleClick}>
+            <img src={setting} alt="gear icon"/>
+            <p>Settings</p>
+          </div>
+          <div className="sideNav" data-target="/" onClick={this.handleClick}>
+            <img src={logout} alt="log out button"/>
+            <p>Log Out</p>
+          </div>
         </div>
-        <div className="sideNav" data-target="/Settings" onClick={this.handleClick}>
-          <img src={setting} alt="gear icon"/>
-          <p>Settings</p>
-        </div>
-        <div className="sideNav" data-target="/" onClick={this.handleClick}>
-          <img src={logout} alt="log out button"/>
-          <p>Log Out</p>
-        </div>
-      </div>
-    )
+      )
+    }
+
   }
 }
 

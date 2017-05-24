@@ -186,6 +186,8 @@ textarea {
 	padding:2rem;
 	z-index:10;
 	opacity:.8;
+	transition:.6s;
+	transition-timing-function: ease-in;
 }
 
 .sideNav {
@@ -219,4 +221,11 @@ textarea {
 
 textarea:focus {
 	outline: none;
+}
+
+.move{
+	transition:.6s;
+	transition-timing-function: ease-in;
+	margin:-300px;
+	margin-top: 0;
 }

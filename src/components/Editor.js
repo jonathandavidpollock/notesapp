@@ -28,11 +28,15 @@ class Editor extends Component {
       queries : [],
       text: '#HelloWorld',
       markdown: '#Hello World',
-      bibleverse: []
+      bibleverse: [],
+      sidebar:false
     };
   }
 
   displayNav() {
+    this.setState({
+      sidebar : !this.state.sidebar
+    });
 
   }
 
@@ -56,8 +60,8 @@ class Editor extends Component {
     return (
       <div className="main">
         <div>
-          <EditorHeader title="Editor"/>
-          <SideNav />
+          <EditorHeader title="Editor" displayNav={this.displayNav}/>
+          <SideNav moveNav={this.state.sidebar}/>
           <div className="editorWrapper">
             <div className="Editor">
               <span>Editor</span>

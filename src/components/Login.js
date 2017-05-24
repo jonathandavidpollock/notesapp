@@ -5,12 +5,12 @@ import './css/Login.css';
 
 class Login extends Component {
 
-  constructor() {
-    super();
-    // this.state {
-    //   uid:null
-    // };
-  }
+  // constructor() {
+  //   super();
+  //   // this.state {
+  //   //   uid:null
+  //   // };
+  // }
 
   checkLogin(e) {
     e.preventDefault();

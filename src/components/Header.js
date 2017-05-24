@@ -5,9 +5,15 @@ class EditorHeader extends Component {
   constructor() {
     super();
     this.handleClick = this.handleClick.bind(this);
+    this.state = {
+      sidebar:true
+    };
   }
   handleClick(e) {
-    e.currentTarget
+    // e.currentTarget
+    this.setState({
+      sidebar: false
+    });
   }
   render() {
     return (
