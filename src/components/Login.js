@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-// import { Redirect } from 'react-router-dom';
-// import {browserHistory} from 'react-router';
-// import Documents from './Documents';
+
 import './css/Login.css';
 
 class Login extends Component {
 
-  // constructor(){
-  //   super();
-  //   this.checkLogin = this.checkLogin.bind(this);
-  // }
+  constructor() {
+    super();
+    // this.state {
+    //   uid:null
+    // };
+  }
 
   checkLogin(e) {
     e.preventDefault();
@@ -21,9 +21,15 @@ class Login extends Component {
     // second, go to new page
     this.context.router.history.push('/Documents');
     // this.context.router.push('/Documents');
+
+
   }
 
   render() {
+    // Check if they are not logged in
+    // if(!this.state.uid) {
+    //   return <div>{this}</div>
+    // }
     return (
       <form className="login" onSubmit={this.checkLogin.bind(this)}>
         <h2 className="loginHeading">Login</h2>

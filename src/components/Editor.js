@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import EditorHeader from './EditorHeader';
+import SideNav from './SideNav';
 import marked from 'marked';
 
 import './css/Editor.css';
@@ -22,12 +23,17 @@ class Editor extends Component {
     super(props);
     this.handleChange = this.handleChange.bind(this);
     this.callAPI = this.callAPI.bind(this);
+    this.displayNav = this.displayNav.bind(this);
     this.state = {
       queries : [],
       text: '#HelloWorld',
       markdown: '#Hello World',
       bibleverse: []
     };
+  }
+
+  displayNav() {
+
   }
 
   handleChange(event) {
@@ -51,6 +57,7 @@ class Editor extends Component {
       <div className="main">
         <div>
           <EditorHeader title="Editor"/>
+          <SideNav />
           <div className="editorWrapper">
             <div className="Editor">
               <span>Editor</span>
@@ -93,7 +100,7 @@ class Editor extends Component {
         let param = "{" + query + "}";
         let array = this.state.markdown.split(param);
         this.setState({
-          markdown: array.join(">" + data.text.trim() + "/n")
+          markdown: array.join(">" + data.text.trim())
         })
       })
       .catch((error)=> {

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
 /* CSS RESET
 ====================================================================================================
 ====================================================================================================
@@ -77,14 +79,20 @@ html {
 }
 
 body {
+	font-family: 'Montserrat', sans-serif;
   background-color: #DBC8B5;
-  font-size:1.6rem;
+  font-size:1.8rem;
   color:#171924;
+	line-height: 2.4rem;
 }
 
 h1,h2,h3,h4,h5,h6,p {
 	padding:1rem;
 	text-align: left;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight:bold;
 }
 
 
@@ -134,6 +142,7 @@ nav {
 }
 
 blockquote {
+	font-style: italic;
   background: #f9f9f9;
   border-left: 10px solid #ccc;
   margin: 1.5em 10px;
@@ -150,4 +159,64 @@ blockquote:before {
 }
 blockquote p {
   display: inline;
+}
+
+#hamburger {
+	width:30px;
+	margin-left:20px;
+}
+
+#hamburger:hover {
+	cursor: pointer;
+}
+
+.Editor, .Live {
+	padding:0;
+}
+
+textarea {
+	padding:1rem;
+}
+
+.sidebar {
+	float:left;
+	background-color:#25272F;
+	width:225px;
+	height:100vh;
+	padding:2rem;
+	z-index:10;
+	opacity:.8;
+}
+
+.sideNav {
+	padding:2.4rem;
+	margin-top: .5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+	border:2px solid transparent;
+	border-radius:25px;
+}
+
+.sideNav:hover {
+	cursor:pointer;
+	border-color:#ffffff;
+	transition:.6s;
+
+}
+
+.sideNav p {
+	color:#fff;
+	font-size:2.4rem;
+	line-height: 2.8rem;
+	text-align: center;
+}
+
+.sideNav img {
+	margin:auto;
+	max-width: 90px;
+}
+
+textarea:focus {
+	outline: none;
 }

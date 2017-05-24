@@ -12,8 +12,8 @@
 
 textarea, .display {
   width:100%;
+  height:100vh;
   background-color: #ffffff;
-  height:600px;
 }
 
 .display {
