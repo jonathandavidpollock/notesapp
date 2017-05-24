@@ -3,11 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "marked": "^0.3.6",
+    "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-markdown": "^2.5.0",
     "react-router-dom": "^4.1.1"
   },
   "devDependencies": {
+    "concurrently": "^3.4.0",
     "react-scripts": "0.9.5"
   },
   "scripts": {

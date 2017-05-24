@@ -1,0 +1,25 @@
+.editorWrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Editor, .Live {
+  background-color:#BD9872;
+  width:50%;
+  text-align: center;
+  padding:.5rem;
+}
+
+textarea, .display {
+  width:100%;
+  background-color: #ffffff;
+  height:600px;
+}
+
+.display {
+  background-color: #F7F2EC;
+}
+
+.editorButton {
+  display:none;
+}

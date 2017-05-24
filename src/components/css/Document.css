@@ -1,0 +1,13 @@
+.btnCreateDoc {
+  margin-left:80%;
+  margin-top:3%;
+}
+
+.docHeading {
+  text-align: center;
+}
+
+.docList {
+  display:flex;
+  justify-content: space-around;
+}

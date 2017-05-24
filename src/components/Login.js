@@ -1,7 +1,8 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 // import { Redirect } from 'react-router-dom';
-import {browserHistory} from 'react-router';
-import Documents from './Documents';
+// import {browserHistory} from 'react-router';
+// import Documents from './Documents';
 import './css/Login.css';
 
 class Login extends Component {

@@ -82,10 +82,6 @@ body {
   color:#171924;
 }
 
-h2 {
-  padding: 1rem;
-  font-size:3rem;
-}
 
 button {
   background-color:#A77643;
@@ -107,4 +103,12 @@ nav {
 	height: 70px;
 	display: flex;
 	align-items: center;
+}
+
+span {
+	background-color:#BD9872;
+}
+
+.display {
+	text-align:left;
 }
