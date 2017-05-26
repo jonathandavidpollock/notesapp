@@ -141,6 +141,10 @@ nav {
 	align-items: center;
 }
 
+
+/* BLOCKQUOTES
+====================================================================== */
+
 blockquote {
 	font-style: italic;
   background: #f9f9f9;
@@ -160,6 +164,11 @@ blockquote:before {
 blockquote p {
   display: inline;
 }
+
+
+
+/* HAMBURGER
+====================================================================== */
 
 #hamburger {
 	width:30px;
@@ -181,6 +190,11 @@ textarea {
 .loginHeading {
 	border-left: 1px solid #171924;
 }
+
+
+
+/* SIDEBAR
+====================================================================== */
 
 .sidebar {
 	position:absolute;
@@ -235,6 +249,9 @@ textarea:focus {
 	margin-top: 0;
 }
 
+
+/* DOCUMENTS PAGE
+====================================================================== */
 .docs {
 	border-top:2px solid #25272F;
 	margin-top:2rem;
@@ -247,10 +264,16 @@ textarea:focus {
 	line-height: 4rem;
 }
 
+
+/* SETTINGS
+====================================================================== */
+
 .settingHeading {
 	text-align: center;
 	font-size: 4rem;
 }
+
+
 
 .settings { 	border-bottom:2px solid #25272F;}
 
@@ -288,6 +311,10 @@ textarea:focus {
 	font-style: italic;
 	margin-top: 10rem;
 }
+
+
+/* MODALS
+====================================================================== */
 
 .modalWrapper {
 	position: absolute;
@@ -351,4 +378,17 @@ textarea:focus {
 
 .displayNone {
 	display:none;
+}
+
+
+/* 404 PAGE
+====================================================================== */
+
+.error {
+	line-height: 13rem;
+	text-align: center;
+	font-size: 20rem;
+	padding-top: 10rem;
+	font-weight: bold;
+	font-style: italic;
 }

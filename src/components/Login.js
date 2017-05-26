@@ -5,6 +5,8 @@ import './css/Login.css';
 
 class Login extends Component {
 
+  // possibly use the constructor later to set uuid
+
   // constructor() {
   //   super();
   //   // this.state {
@@ -46,6 +48,8 @@ class Login extends Component {
   }
 }
 
+
+// grab router from context
 Login.contextTypes = {
   router: PropTypes.object
 }

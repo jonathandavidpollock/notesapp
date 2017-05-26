@@ -11,7 +11,7 @@ class EditorHeader extends Component {
     };
   }
   handleClick(e) {
-    // e.currentTarget
+    // set state
     this.setState({
       sidebar: false
     });

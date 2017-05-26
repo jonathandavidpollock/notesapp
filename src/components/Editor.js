@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import EditorHeader from './EditorHeader';
 import SideNav from './SideNav';
 import marked from 'marked';
-
 import './css/Editor.css';
 
-
+// set the options for marked {found on github}
 marked.setOptions({
   renderer: new marked.Renderer(),
   gfm: false,
@@ -21,9 +20,11 @@ class Editor extends Component {
 
   constructor(props) {
     super(props);
+    // All require binding to process
     this.handleChange = this.handleChange.bind(this);
     this.callAPI = this.callAPI.bind(this);
     this.displayNav = this.displayNav.bind(this);
+    // Set the initial state
     this.state = {
       queries : [],
       text: '#HelloWorld',
@@ -36,6 +37,7 @@ class Editor extends Component {
 
 
   displayNav() {
+    // Resassign the state
     this.setState({
       sidebar : !this.state.sidebar
     });
@@ -48,6 +50,7 @@ class Editor extends Component {
     if (this.input.value.match(pttrn)) {
       let params = this.input.value.match(pttrn);
       let i = 0;
+      // process each of the {}
       params.forEach(()=> {
         let query = params[i].substring(1, params[i].length-1);
         console.log(`Matches Found: ${query}`);
@@ -88,6 +91,7 @@ class Editor extends Component {
   callAPI(qry) {
     // SEE IF the query has been added to state
     if(!this.state.queries.qry) {
+      // concat the crossorigin domain with my own
       let domain = "https://crossorigin.me/http://bible-api.com/";
       let query = qry;
       let url = domain + query;
@@ -109,8 +113,9 @@ class Editor extends Component {
         console.log(`Verse: ${this.state.bibleverse}`);
         let param = "{" + query + "}";
         let array = this.state.markdown.split(param);
-        // Check for undefined
 
+
+        // convert to blockquote with >
         this.setState({
           markdown: array.join(">" + data.text.trim())
         })

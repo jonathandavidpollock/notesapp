@@ -14,6 +14,7 @@ class Documents extends Component {
     };
   }
 
+  // set the state of nav
   displayNav() {
     this.setState({
       sidebar : !this.state.sidebar
@@ -38,6 +39,7 @@ class Documents extends Component {
     )
   }
 
+  // redirect to different page
   goToEditPage(e) {
     e.preventDefault();
     console.log("You clicked Create Document.")
@@ -45,6 +47,7 @@ class Documents extends Component {
   }
 }
 
+// add router to context
 Documents.contextTypes = {
   router: PropTypes.object
 }

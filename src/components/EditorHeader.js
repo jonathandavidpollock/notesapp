@@ -7,6 +7,7 @@ import './css/Header.css';
 class EditorHeader extends Component {
   constructor(props) {
     super(props);
+    // bind and set state
     this.modalToggle = this.modalToggle.bind(this);
     this.state = {
       modalOpened: false
@@ -14,6 +15,7 @@ class EditorHeader extends Component {
   }
 
   modalToggle () {
+    // Reverse the state
     this.setState({ modalOpened: !this.state.modalOpened })
   }
 
