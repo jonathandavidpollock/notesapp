@@ -20,7 +20,7 @@ class EditorHeader extends Component {
     return (
       <nav>
         <div className="menu">
-          <img src={hamburger} id="hamburger" alt="menu icon" onClick={this.handleClick}/>
+          <img src={hamburger} id="hamburger" alt="menu icon" onClick={()=>this.props.displayNav()}/>
           <h2 className="pageName">{this.props.title}</h2>
         </div>
       </nav>
