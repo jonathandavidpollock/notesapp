@@ -209,7 +209,7 @@ textarea {
 
 .sideNav p {
 	color:#fff;
-	font-size:2.4rem;
+	font-size:1.6rem;
 	line-height: 2.8rem;
 	text-align: center;
 }
@@ -228,4 +228,11 @@ textarea:focus {
 	transition-timing-function: ease-in;
 	margin:-300px;
 	margin-top: 0;
+}
+
+.docs {
+	border-top:2px solid #25272F;
+	margin-top:2rem;
+	width:80%;
+	margin:auto;
 }

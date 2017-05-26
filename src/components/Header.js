@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import hamburger from '../assets/hamburger.svg';
 import './css/Header.css';
 
 class EditorHeader extends Component {
@@ -19,7 +20,7 @@ class EditorHeader extends Component {
     return (
       <nav>
         <div className="menu">
-          <img src="../assets/hamburger.svg" alt="menu icon" onClick={this.handleClick}/>
+          <img src={hamburger} id="hamburger" alt="menu icon" onClick={this.handleClick}/>
           <h2 className="pageName">{this.props.title}</h2>
         </div>
       </nav>

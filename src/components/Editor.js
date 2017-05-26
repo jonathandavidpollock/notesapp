@@ -41,6 +41,7 @@ class Editor extends Component {
   }
 
   handleChange(event) {
+    // Search for REGEX of {}
     const pttrn = /{([^}]*)}/g;
     if (this.input.value.match(pttrn)) {
       let params = this.input.value.match(pttrn);
@@ -83,6 +84,7 @@ class Editor extends Component {
   // }
 
   callAPI(qry) {
+    // SEE IF the query has been added to state
     if(!this.state.queries.qry) {
       let domain = "https://crossorigin.me/http://bible-api.com/";
       let query = qry;
@@ -95,6 +97,8 @@ class Editor extends Component {
         return response.json();
       })
       .then(data=>{
+        // See if undefined if so reset the value
+        data.text = (data.text == undefined) ? "Verse not found: Please try again (BookChapter:Verse)" : data.text
         this.setState({
           bibleverse: data.text,
           queries: qry
@@ -103,6 +107,8 @@ class Editor extends Component {
         console.log(`Verse: ${this.state.bibleverse}`);
         let param = "{" + query + "}";
         let array = this.state.markdown.split(param);
+        // Check for undefined
+
         this.setState({
           markdown: array.join(">" + data.text.trim())
         })

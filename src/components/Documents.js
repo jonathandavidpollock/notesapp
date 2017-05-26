@@ -15,6 +15,9 @@ class Documents extends Component {
           <h3>Title</h3>
           <h3>Privacy</h3>
         </div>
+        <div className="docs">
+          
+        </div>
       </div>
     )
   }
