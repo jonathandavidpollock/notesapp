@@ -33,6 +33,8 @@ class Editor extends Component {
     };
   }
 
+
+
   displayNav() {
     this.setState({
       sidebar : !this.state.sidebar

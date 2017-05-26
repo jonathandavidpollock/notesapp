@@ -1,9 +1,22 @@
 import React, { Component } from 'react';
+import Modal from './Modal';
 import hamburger from '../assets/hamburger.svg';
 import './css/Header.css';
 
 
 class EditorHeader extends Component {
+  constructor(props) {
+    super(props);
+    this.modalToggle = this.modalToggle.bind(this);
+    this.state = {
+      modalOpened: false
+    };
+  }
+
+  modalToggle () {
+    this.setState({ modalOpened: !this.state.modalOpened })
+  }
+
   render() {
     return (
       <nav>
@@ -12,10 +25,11 @@ class EditorHeader extends Component {
           <h2 className="pageName">{this.props.title}</h2>
         </div>
         <div className="buttons">
-          <button className="btnPublish">Publish</button>
-          <button className="btnSchedule">Schedule</button>
+          <button onClick={this.modalToggle} className="btnSchedule">Schedule</button>
         </div>
+        <Modal state={this.state.modalOpened}/>
       </nav>
+
     )
   }
 }
